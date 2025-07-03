@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.slide {
+  display: none;
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 1200px;
+  height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide.active {
+  display: block;
+}
+
+/* Cornell Note Format */
+.cornell-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr auto;
+  gap: 20px;
+  height: 90%;
+}
+
+.cue-column {
+  background: #f1f3f4;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #4285f4;
+}
+
+.notes-column {
+  background: white;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.summary-section {
+  grid-column: 1 / -1;
+  background: #e8f0fe;
+  padding: 15px;
+  border-radius: 8px;
+  border-top: 3px solid #4285f4;
+}
+
+h1 {
+  color: #1a73e8;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+h2 {
+  color: #1a73e8;
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4285f4;
+  padding-bottom: 5px;
+}
+
+h3 {
+  color: #5f6368;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.cue-item {
+  background: #4285f4;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin: 5px 2px;
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notes-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.notes-list li:last-child {
+  border-bottom: none;
+}
+
+.metric {
+  background: #e8f0fe;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.metric-number {
+  font-size: 2em;
+  font-weight: bold;
+  color: #1a73e8;
+  display: block;
+}
+
+.metric-label {
+  font-size: 0.9em;
+  color: #5f6368;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+}
+
+.nav-btn {
+  background: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #1a73e8;
+}
+
+.nav-btn:disabled {
+  background: #bdc1c6;
+  cursor: not-allowed;
+}
+
+.slide-counter {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #4285f4;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 15px;
+  font-size: 0.9em;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.title-slide {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.title-slide h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.title-slide .subtitle {
+  font-size: 1.2em;
+  color: #5f6368;
+  margin-bottom: 40px;
+}
+
+.title-slide .key-points {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.key-point {
+  background: #4285f4;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 150px;
+}
+
+.key-point-number {
+  font-size: 2em;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
