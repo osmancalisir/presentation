@@ -29,90 +29,90 @@ export interface CornellSlideContent {
 export const slideshowData: SlideData[] = [
   {
     id: 'slide1',
-    title: 'Your Presentation Title',
+    title: 'TUM Venture Labs Case Study',
     type: 'title',
     content: {
-      subtitle: 'Add your subtitle here',
+      subtitle: 'API Optimization & DevOps Integration',
       keyPoints: [
-        { number: '100', label: 'First Metric' },
-        { number: '250', label: 'Second Metric' },
-        { number: '75%', label: 'Third Metric' }
+        { number: '300K', label: 'API Calls Needed' },
+        { number: '100K', label: 'Current Limit' },
+        { number: '85%', label: 'Reduction Target' }
       ]
     }
   },
   {
     id: 'slide2',
-    title: 'Topic 1: Main Concept',
+    title: 'Problem 1: API Call Limits',
     type: 'cornell',
     content: {
-      cueItems: ['Key Point 1', 'Key Point 2', 'Key Point 3', 'Key Point 4'],
+      cueItems: ['Caching', 'Batch Processing', 'Progressive Loading', 'Smart Architecture'],
       notes: [
-        { title: 'First Point', description: 'Detailed explanation of the first main point' },
-        { title: 'Second Point', description: 'Detailed explanation of the second main point' },
-        { title: 'Third Point', description: 'Detailed explanation of the third main point' },
-        { title: 'Fourth Point', description: 'Detailed explanation of the fourth main point' }
+        { title: 'Caching Layer', description: 'Store frequent requests, reduce 60-80% calls' },
+        { title: 'Batch Operations', description: 'Group API calls, sync every 15-30 min' },
+        { title: 'Lazy Loading', description: 'Load data only when needed' },
+        { title: 'Data Optimization', description: 'Pagination, local storage for static data' }
       ],
       metrics: [
-        { number: '90%', label: 'Success Rate' }
+        { number: '65-85%', label: 'Expected Reduction' }
       ],
-      summary: 'This section summarizes the main concept and its key benefits or outcomes.'
+      summary: 'Implement caching and batch processing to reduce API calls from 300K to 50K-100K monthly while improving performance by 40-60%.'
     }
   },
   {
     id: 'slide3',
-    title: 'Topic 2: Secondary Concept',
+    title: 'Problem 2: DevOps Integration',
     type: 'cornell',
     content: {
-      cueItems: ['Strategy', 'Implementation', 'Results', 'Analysis'],
+      cueItems: ['Version Control', 'Testing', 'Monitoring', 'Deployment'],
       notes: [
-        { title: 'Strategic Approach', description: 'How to approach this topic strategically' },
-        { title: 'Implementation Steps', description: 'Key steps required for successful implementation' },
-        { title: 'Expected Results', description: 'What outcomes you can expect to achieve' },
-        { title: 'Analysis Method', description: 'How to measure and analyze the results' }
+        { title: 'Git Integration', description: 'Track Softr configs, Airtable schemas' },
+        { title: 'Automated Testing', description: 'API tests, UI tests, data validation' },
+        { title: '24/7 Monitoring', description: 'Uptime, response times, error rates' },
+        { title: 'Staging Pipeline', description: 'Test environment, automated deployment' }
       ],
       metrics: [
-        { number: '85%', label: 'Efficiency Gain' }
+        { number: '99.9%', label: 'Target Uptime' }
       ],
-      summary: 'This approach provides a comprehensive framework for addressing the secondary concept effectively.'
+      summary: 'Hybrid DevOps approach maintains no-code speed while adding enterprise reliability and monitoring.'
     }
   },
   {
     id: 'slide4',
-    title: 'Implementation Plan',
+    title: 'Implementation Timeline',
     type: 'cornell',
     content: {
-      cueItems: ['Phase 1', 'Phase 2', 'Phase 3'],
+      cueItems: ['Week 1-2', 'Week 3-4', 'Week 5-6'],
       notes: [
-        { title: 'Initial Phase', description: 'Setup and preparation activities' },
-        { title: 'Development Phase', description: 'Core implementation and development work' },
-        { title: 'Launch Phase', description: 'Deployment and go-live activities' }
+        { title: 'Phase 1', description: 'API optimization, caching implementation' },
+        { title: 'Phase 2', description: 'DevOps setup, testing automation' },
+        { title: 'Phase 3', description: 'Analytics deployment, optimization' }
       ],
       metrics: [
-        { number: '12', label: 'Weeks Timeline' },
-        { number: '3', label: 'Major Phases' }
+        { number: '6', label: 'Weeks Total' },
+        { number: '3', label: 'Key Phases' }
       ],
-      summary: 'A structured three-phase approach ensures systematic progress and milestone achievement.'
+      summary: '6-week phased approach ensures minimal disruption while delivering immediate value in each phase.'
     }
   },
   {
     id: 'slide5',
-    title: 'Expected Outcomes',
+    title: 'Expected Results',
     type: 'cornell',
     content: {
-      cueItems: ['Quality', 'Efficiency', 'Growth', 'Innovation'],
+      cueItems: ['Performance', 'Reliability', 'Efficiency', 'Quality'],
       notes: [
-        { title: 'Quality Improvement', description: 'Enhanced quality standards and deliverables' },
-        { title: 'Efficiency Gains', description: 'Streamlined processes and reduced overhead' },
-        { title: 'Growth Opportunities', description: 'New opportunities for expansion and development' },
-        { title: 'Innovation Impact', description: 'Innovative solutions and competitive advantages' }
+        { title: 'API Reduction', description: '85% reduction in API calls' },
+        { title: 'Uptime', description: '99.9% system availability' },
+        { title: 'Deployment Speed', description: '50% faster deployment times' },
+        { title: 'Issue Reduction', description: '90% fewer production issues' }
       ],
       metrics: [
-        { number: '95%', label: 'Quality Score' },
-        { number: '60%', label: 'Efficiency Gain' },
-        { number: '40%', label: 'Growth Rate' },
-        { number: '80%', label: 'Innovation Index' }
+        { number: '85%', label: 'API Reduction' },
+        { number: '99.9%', label: 'Uptime' },
+        { number: '50%', label: 'Faster Deployment' },
+        { number: '90%', label: 'Fewer Issues' }
       ],
-      summary: 'The combined impact delivers significant improvements across all key performance indicators.'
+      summary: 'Solution delivers scalable architecture within current budget while improving performance, reliability, and development velocity.'
     }
   }
 ];
