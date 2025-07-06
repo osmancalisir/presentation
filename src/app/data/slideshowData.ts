@@ -29,90 +29,93 @@ export interface CornellSlideContent {
 export const slideshowData: SlideData[] = [
   {
     id: 'slide1',
-    title: 'Your Presentation Title',
+    title: 'Frontend Scaling Architecture',
     type: 'title',
     content: {
-      subtitle: 'Add your subtitle here',
+      subtitle: 'Modern Stack for 10x Data Growth',
       keyPoints: [
-        { number: '100', label: 'First Metric' },
-        { number: '250', label: 'Second Metric' },
-        { number: '75%', label: 'Third Metric' }
+        { number: '1M', label: 'Data Points' },
+        { number: '10x', label: 'Scale Increase' },
+        { number: '<2s', label: 'Load Time Goal' }
       ]
     }
   },
   {
     id: 'slide2',
-    title: 'Topic 1: Main Concept',
+    title: 'Core Strategy: Architecture Modernization',
     type: 'cornell',
     content: {
-      cueItems: ['Key Point 1', 'Key Point 2', 'Key Point 3', 'Key Point 4'],
+      cueItems: ['State Management', 'Data Fetching', 'Rendering', 'Caching'],
       notes: [
-        { title: 'First Point', description: 'Detailed explanation of the first main point' },
-        { title: 'Second Point', description: 'Detailed explanation of the second main point' },
-        { title: 'Third Point', description: 'Detailed explanation of the third main point' },
-        { title: 'Fourth Point', description: 'Detailed explanation of the fourth main point' }
+        { title: 'Zustand + Immer', description: 'Lightweight state with immutable updates, perfect for large datasets' },
+        { title: 'TanStack Query', description: 'Intelligent caching, background sync, optimistic updates' },
+        { title: 'React-Window + WebGL', description: 'Virtual scrolling + GPU-accelerated rendering' },
+        { title: 'IndexedDB + Service Worker', description: 'Persistent offline storage with background sync' }
       ],
       metrics: [
-        { number: '90%', label: 'Success Rate' }
+        { number: '80%', label: 'Bundle Size Reduction' },
+        { number: '90%', label: 'Re-render Reduction' }
       ],
-      summary: 'This section summarizes the main concept and its key benefits or outcomes.'
+      summary: 'Modern stack reduces complexity while dramatically improving performance through intelligent state management and data fetching patterns.'
     }
   },
   {
     id: 'slide3',
-    title: 'Topic 2: Secondary Concept',
+    title: 'Data Flow & State Architecture',
     type: 'cornell',
     content: {
-      cueItems: ['Strategy', 'Implementation', 'Results', 'Analysis'],
+      cueItems: ['Query Layer', 'State Slicing', 'Normalization', 'Subscriptions'],
       notes: [
-        { title: 'Strategic Approach', description: 'How to approach this topic strategically' },
-        { title: 'Implementation Steps', description: 'Key steps required for successful implementation' },
-        { title: 'Expected Results', description: 'What outcomes you can expect to achieve' },
-        { title: 'Analysis Method', description: 'How to measure and analyze the results' }
+        { title: 'Query Orchestration', description: 'TanStack Query with parallel fetching, deduplication, and infinite queries' },
+        { title: 'Normalized State', description: 'Entity-based state structure (users, datasets, charts) with Zustand slices' },
+        { title: 'Selective Subscriptions', description: 'Component-level subscriptions to prevent unnecessary re-renders' },
+        { title: 'Optimistic Updates', description: 'Immediate UI updates with rollback capability for better UX' }
       ],
       metrics: [
-        { number: '85%', label: 'Efficiency Gain' }
+        { number: '95%', label: 'Cache Hit Rate' },
+        { number: '5ms', label: 'State Update Time' }
       ],
-      summary: 'This approach provides a comprehensive framework for addressing the secondary concept effectively.'
+      summary: 'Normalized state architecture with intelligent caching eliminates data duplication and provides instant UI responsiveness.'
     }
   },
   {
     id: 'slide4',
-    title: 'Implementation Plan',
+    title: 'Performance & Rendering Strategy',
     type: 'cornell',
     content: {
-      cueItems: ['Phase 1', 'Phase 2', 'Phase 3'],
+      cueItems: ['Virtualization', 'GPU Rendering', 'Web Workers', 'Streaming'],
       notes: [
-        { title: 'Initial Phase', description: 'Setup and preparation activities' },
-        { title: 'Development Phase', description: 'Core implementation and development work' },
-        { title: 'Launch Phase', description: 'Deployment and go-live activities' }
+        { title: 'React-Window + FixedSizeList', description: 'Render only visible rows, maintain smooth scrolling' },
+        { title: 'Three.js/WebGL Canvas', description: 'GPU-accelerated charts with LOD (Level of Detail) optimization' },
+        { title: 'Worker Threads', description: 'Data processing, filtering, and aggregation off main thread' },
+        { title: 'Streaming Updates', description: 'WebSocket + Server-Sent Events for real-time data updates' }
       ],
       metrics: [
-        { number: '12', label: 'Weeks Timeline' },
-        { number: '3', label: 'Major Phases' }
+        { number: '60fps', label: 'Scroll Performance' },
+        { number: '<100ms', label: 'Interaction Response' }
       ],
-      summary: 'A structured three-phase approach ensures systematic progress and milestone achievement.'
+      summary: 'Multi-threaded architecture with GPU rendering ensures smooth interactions even with massive datasets.'
     }
   },
   {
     id: 'slide5',
-    title: 'Expected Outcomes',
+    title: 'Success Validation & Monitoring',
     type: 'cornell',
     content: {
-      cueItems: ['Quality', 'Efficiency', 'Growth', 'Innovation'],
+      cueItems: ['Performance', 'Memory', 'User Experience', 'Scalability'],
       notes: [
-        { title: 'Quality Improvement', description: 'Enhanced quality standards and deliverables' },
-        { title: 'Efficiency Gains', description: 'Streamlined processes and reduced overhead' },
-        { title: 'Growth Opportunities', description: 'New opportunities for expansion and development' },
-        { title: 'Innovation Impact', description: 'Innovative solutions and competitive advantages' }
+        { title: 'Core Web Vitals', description: 'LCP <2.5s, FID <100ms, CLS <0.1 across all device types' },
+        { title: 'Memory Profiling', description: 'Heap snapshots, memory leaks detection, <500MB total usage' },
+        { title: 'User Journey Testing', description: 'E2E tests with 1M+ records, interaction stress testing' },
+        { title: 'Load Testing', description: 'Concurrent users, data mutation scenarios, failover testing' }
       ],
       metrics: [
-        { number: '95%', label: 'Quality Score' },
-        { number: '60%', label: 'Efficiency Gain' },
-        { number: '40%', label: 'Growth Rate' },
-        { number: '80%', label: 'Innovation Index' }
+        { number: '<2s', label: 'Time to Interactive' },
+        { number: '99.9%', label: 'Uptime Target' },
+        { number: '500MB', label: 'Memory Limit' },
+        { number: '10M+', label: 'Future Capacity' }
       ],
-      summary: 'The combined impact delivers significant improvements across all key performance indicators.'
+      summary: 'Comprehensive monitoring ensures reliable performance while preparing for future 10x+ growth with modern, maintainable architecture.'
     }
   }
 ];
