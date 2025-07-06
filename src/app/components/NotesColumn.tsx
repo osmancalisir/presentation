@@ -12,6 +12,7 @@ export default function NotesColumn({ notes, metrics }: NotesColumnProps) {
             key={index}
             title={note.title}
             description={note.description}
+            information={note.information}
           />
         ))}
       </ul>

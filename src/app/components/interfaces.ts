@@ -18,6 +18,7 @@ interface CornellSlideContent {
   notes: Array<{
     title: string;
     description: string;
+    information: string;
   }>;
   metrics?: Array<{
     number: string;
@@ -57,6 +58,7 @@ interface NotesColumnProps {
   notes: Array<{
     title: string;
     description: string;
+    information: string;
   }>;
   metrics?: Array<{
     number: string;
@@ -67,6 +69,7 @@ interface NotesColumnProps {
 interface NoteItemProps {
   title: string;
   description: string;
+  information: string;
 }
 
 interface MetricProps {

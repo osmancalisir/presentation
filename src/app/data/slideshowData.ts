@@ -18,6 +18,7 @@ export interface CornellSlideContent {
   notes: Array<{
     title: string;
     description: string;
+    information?: string;
   }>;
   metrics?: Array<{
     number: string;
