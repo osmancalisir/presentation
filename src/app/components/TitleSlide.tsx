@@ -7,7 +7,7 @@ export default function TitleSlide({ title, content }: TitleSlideProps) {
       <h1>{title}</h1>
       <p className="subtitle">{content.subtitle}</p>
       <div className="key-points">
-        {content.keyPoints.map((point, index) => (
+        {content?.keyPoints?.map((point, index) => (
           <KeyPoint
             key={index}
             number={point.number}

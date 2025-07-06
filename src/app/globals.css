@@ -169,15 +169,14 @@ h3 {
   position: absolute;
   bottom: 100%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-90%);
   background: #333;
   color: white;
   padding: 8px 12px;
   border-radius: 6px;
   font-size: 0.85em;
   white-space: nowrap;
-  width: 200px;
-  max-width: 400px;
+  width: 400px;
   white-space: normal;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
   z-index: 1000;
@@ -188,8 +187,8 @@ h3 {
   content: '';
   position: absolute;
   top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 90%;
+  transform: translateX(-90%);
   border: 5px solid transparent;
   border-top-color: #333;
 }
