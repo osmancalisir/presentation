@@ -18,6 +18,7 @@ export interface CornellSlideContent {
   notes: Array<{
     title: string;
     description: string;
+    information?: string;
   }>;
   metrics?: Array<{
     number: string;
@@ -47,10 +48,26 @@ export const slideshowData: SlideData[] = [
     content: {
       cueItems: ['Key Point 1', 'Key Point 2', 'Key Point 3', 'Key Point 4'],
       notes: [
-        { title: 'First Point', description: 'Detailed explanation of the first main point' },
-        { title: 'Second Point', description: 'Detailed explanation of the second main point' },
-        { title: 'Third Point', description: 'Detailed explanation of the third main point' },
-        { title: 'Fourth Point', description: 'Detailed explanation of the fourth main point' }
+        { 
+          title: 'First Point', 
+          description: 'Detailed explanation of the first main point', 
+          information: 'This point focuses on foundational concepts that are essential for understanding the overall framework. It establishes the baseline knowledge required for all subsequent topics.'
+        },
+        { 
+          title: 'Second Point', 
+          description: 'Detailed explanation of the second main point',
+          information: 'Building upon the first point, this covers intermediate concepts and their practical applications in real-world scenarios. Includes case studies and examples.'
+        },
+        { 
+          title: 'Third Point', 
+          description: 'Detailed explanation of the third main point',
+          information: 'Advanced strategies and methodologies that leverage the previous concepts for maximum effectiveness. Focuses on optimization and best practices.'
+        },
+        { 
+          title: 'Fourth Point', 
+          description: 'Detailed explanation of the fourth main point',
+          information: 'Integration techniques that bring all concepts together for comprehensive implementation. Includes troubleshooting and maintenance considerations.'
+        }
       ],
       metrics: [
         { number: '90%', label: 'Success Rate' }
@@ -65,10 +82,26 @@ export const slideshowData: SlideData[] = [
     content: {
       cueItems: ['Strategy', 'Implementation', 'Results', 'Analysis'],
       notes: [
-        { title: 'Strategic Approach', description: 'How to approach this topic strategically' },
-        { title: 'Implementation Steps', description: 'Key steps required for successful implementation' },
-        { title: 'Expected Results', description: 'What outcomes you can expect to achieve' },
-        { title: 'Analysis Method', description: 'How to measure and analyze the results' }
+        { 
+          title: 'Strategic Approach', 
+          description: 'How to approach this topic strategically',
+          information: 'Focus on long-term planning and alignment with organizational goals. Consider market conditions, competitive landscape, and resource constraints when developing your strategy.'
+        },
+        { 
+          title: 'Implementation Steps', 
+          description: 'Key steps required for successful implementation',
+          information: 'Detailed roadmap including resource allocation, timeline management, and risk mitigation strategies. Break down complex tasks into manageable phases with clear milestones.'
+        },
+        { 
+          title: 'Expected Results', 
+          description: 'What outcomes you can expect to achieve',
+          information: 'Quantifiable benefits including ROI projections, efficiency gains, and competitive advantages. Set realistic expectations and prepare for potential challenges.'
+        },
+        { 
+          title: 'Analysis Method', 
+          description: 'How to measure and analyze the results',
+          information: 'Comprehensive evaluation framework using KPIs, data analytics, and continuous improvement processes. Establish baseline metrics before implementation for accurate comparison.'
+        }
       ],
       metrics: [
         { number: '85%', label: 'Efficiency Gain' }
@@ -83,9 +116,21 @@ export const slideshowData: SlideData[] = [
     content: {
       cueItems: ['Phase 1', 'Phase 2', 'Phase 3'],
       notes: [
-        { title: 'Initial Phase', description: 'Setup and preparation activities' },
-        { title: 'Development Phase', description: 'Core implementation and development work' },
-        { title: 'Launch Phase', description: 'Deployment and go-live activities' }
+        { 
+          title: 'Initial Phase', 
+          description: 'Setup and preparation activities',
+          information: 'Includes stakeholder alignment, resource procurement, team formation, and baseline establishment. Critical for setting the foundation and ensuring all prerequisites are met.'
+        },
+        { 
+          title: 'Development Phase', 
+          description: 'Core implementation and development work',
+          information: 'Active development, testing, quality assurance, and iterative improvements based on feedback. This phase requires close monitoring and regular status updates.'
+        },
+        { 
+          title: 'Launch Phase', 
+          description: 'Deployment and go-live activities',
+          information: 'Final deployment, user training, support systems activation, and performance monitoring setup. Includes rollback procedures and emergency response protocols.'
+        }
       ],
       metrics: [
         { number: '12', label: 'Weeks Timeline' },
@@ -101,10 +146,26 @@ export const slideshowData: SlideData[] = [
     content: {
       cueItems: ['Quality', 'Efficiency', 'Growth', 'Innovation'],
       notes: [
-        { title: 'Quality Improvement', description: 'Enhanced quality standards and deliverables' },
-        { title: 'Efficiency Gains', description: 'Streamlined processes and reduced overhead' },
-        { title: 'Growth Opportunities', description: 'New opportunities for expansion and development' },
-        { title: 'Innovation Impact', description: 'Innovative solutions and competitive advantages' }
+        { 
+          title: 'Quality Improvement', 
+          description: 'Enhanced quality standards and deliverables',
+          information: 'Implementation of quality assurance processes, standardized procedures, and continuous improvement cycles. Reduces defects by 40% and improves customer satisfaction scores.'
+        },
+        { 
+          title: 'Efficiency Gains', 
+          description: 'Streamlined processes and reduced overhead',
+          information: 'Automation of routine tasks, optimization of workflows, and elimination of redundant activities. Expected to reduce processing time by 60% and operational costs by 25%.'
+        },
+        { 
+          title: 'Growth Opportunities', 
+          description: 'New opportunities for expansion and development',
+          information: 'Market expansion potential, new revenue streams, and scalability improvements for future growth. Projected to increase market share by 40% within 18 months.'
+        },
+        { 
+          title: 'Innovation Impact', 
+          description: 'Innovative solutions and competitive advantages',
+          information: 'Breakthrough technologies, unique methodologies, and differentiation strategies in the marketplace. Creates sustainable competitive advantages and patent opportunities.'
+        }
       ],
       metrics: [
         { number: '95%', label: 'Quality Score' },
