@@ -7,7 +7,7 @@ export interface SlideData {
 
 export interface TitleSlideContent {
   subtitle: string;
-  keyPoints: Array<{
+  keyPoints?: Array<{
     number: string;
     label: string;
   }>;
@@ -18,6 +18,7 @@ export interface CornellSlideContent {
   notes: Array<{
     title: string;
     description: string;
+    information?: string;
   }>;
   metrics?: Array<{
     number: string;
@@ -29,33 +30,50 @@ export interface CornellSlideContent {
 export const slideshowData: SlideData[] = [
   {
     id: 'slide1',
-    title: 'TUM Venture Labs Case Study',
+    title: 'TUM Venture Labs',
     type: 'title',
     content: {
-      subtitle: 'API Optimization & DevOps Integration',
+      subtitle: 'API Optimization + DevOps + Feature Flags + Atomic Design',
       keyPoints: [
-        { number: '300K', label: 'API Calls Needed' },
-        { number: '100K', label: 'Current Limit' },
-        { number: '85%', label: 'Reduction Target' }
+        { number: '85%', label: 'API Reduction' },
+        { number: '99.9%', label: 'Uptime Target' },
+        { number: '4', label: 'Core Solutions' }
       ]
     }
   },
   {
     id: 'slide2',
-    title: 'Problem 1: API Call Limits',
+    title: 'Problem 1: API Call Optimization',
     type: 'cornell',
     content: {
-      cueItems: ['Caching', 'Batch Processing', 'Progressive Loading', 'Smart Architecture'],
+      cueItems: ['State Management', 'Intelligent Caching', 'Progressive Loading', 'Normalization'],
       notes: [
-        { title: 'Caching Layer', description: 'Store frequent requests, reduce 60-80% calls' },
-        { title: 'Batch Operations', description: 'Group API calls, sync every 15-30 min' },
-        { title: 'Lazy Loading', description: 'Load data only when needed' },
-        { title: 'Data Optimization', description: 'Pagination, local storage for static data' }
+        { 
+          title: 'State Management with Zustand', 
+          description: 'Centralized state to prevent duplicate API calls',
+          information: 'Implement Zustand for global state management, preventing duplicate API calls when multiple components need the same data. Cache API responses in state, implement optimistic updates, and use state selectors to minimize re-renders. Reduces redundant API calls by 30-40%.'
+        },
+        { 
+          title: 'Redis Caching Layer', 
+          description: 'Cache frequent requests with TTL management',
+          information: 'Implement Redis for hot data (user profiles, settings) with 1-hour TTL, warm cache for dashboard data with 15-min TTL, and cold storage for historical data. Reduces 60-80% of repetitive API calls.'
+        },
+        { 
+          title: 'Progressive Data Loading', 
+          description: 'Load data incrementally based on user interaction',
+          information: 'Implement virtual scrolling, lazy loading for dashboard widgets, and on-demand data fetching. Load initial 50 records, fetch more on scroll. Reduces initial load by 70%.'
+        },
+        { 
+          title: 'Data Normalization', 
+          description: 'Optimize data structure to eliminate redundancy',
+          information: 'Store related data efficiently using entity-based structure (users, projects, tasks as separate entities), implement client-side joins, and use reference IDs instead of duplicating data. Reduces data transfer by 30-50% and enables efficient updates.'
+        }
       ],
       metrics: [
-        { number: '65-85%', label: 'Expected Reduction' }
+        { number: '85%', label: 'API Reduction' },
+        { number: '60%', label: 'Faster Loading' }
       ],
-      summary: 'Implement caching and batch processing to reduce API calls from 300K to 50K-100K monthly while improving performance by 40-60%.'
+      summary: 'Multi-layered approach with state management and normalization can reduce API calls from 300K to 45K monthly while improving user experience through smart caching and progressive loading.'
     }
   },
   {
@@ -63,56 +81,149 @@ export const slideshowData: SlideData[] = [
     title: 'Problem 2: DevOps Integration',
     type: 'cornell',
     content: {
-      cueItems: ['Version Control', 'Testing', 'Monitoring', 'Deployment'],
+      cueItems: ['CI/CD Pipeline', 'Monitoring', 'Testing', 'Deployment'],
       notes: [
-        { title: 'Git Integration', description: 'Track Softr configs, Airtable schemas' },
-        { title: 'Automated Testing', description: 'API tests, UI tests, data validation' },
-        { title: '24/7 Monitoring', description: 'Uptime, response times, error rates' },
-        { title: 'Staging Pipeline', description: 'Test environment, automated deployment' }
+        { 
+          title: 'Hybrid CI/CD Pipeline', 
+          description: 'Version control for no-code configurations',
+          information: 'Git tracks Softr page configs, Airtable schema changes, and custom scripts. Automated testing validates API integrations and UI functionality before deployment.'
+        },
+        { 
+          title: 'Comprehensive Monitoring', 
+          description: '24/7 system health and performance tracking',
+          information: 'Monitor API usage, response times, error rates, and user experience metrics. Automated alerts for API limit approaching (80% threshold) and system anomalies.'
+        },
+        { 
+          title: 'Automated Testing Suite', 
+          description: 'API tests, UI tests, and integration validation',
+          information: 'Playwright for UI testing, Postman for API validation, and custom scripts for data integrity checks. Runs on every deployment and daily health checks.'
+        },
+        { 
+          title: 'Staging Environment', 
+          description: 'Safe testing ground before production',
+          information: 'Mirror production setup with test data, validate changes in isolation, and ensure zero-downtime deployments through blue-green strategy(initially costly).'
+        }
       ],
       metrics: [
-        { number: '99.9%', label: 'Target Uptime' }
+        { number: '99.9%', label: 'Uptime' },
+        { number: '50%', label: 'Faster Deployment' }
       ],
-      summary: 'Hybrid DevOps approach maintains no-code speed while adding enterprise reliability and monitoring.'
+      summary: 'Enterprise-grade DevOps practices maintain no-code agility while ensuring reliability and continuous delivery.'
     }
   },
   {
     id: 'slide4',
-    title: 'Implementation Timeline',
+    title: 'Solution 3: Feature Flags System',
     type: 'cornell',
     content: {
-      cueItems: ['Week 1-2', 'Week 3-4', 'Week 5-6'],
+      cueItems: ['Role-Based Access', 'Gradual Rollout', 'A/B Testing', 'Risk Management'],
       notes: [
-        { title: 'Phase 1', description: 'API optimization, caching implementation' },
-        { title: 'Phase 2', description: 'DevOps setup, testing automation' },
-        { title: 'Phase 3', description: 'Analytics deployment, optimization' }
+        { 
+          title: 'Role-Based Feature Control', 
+          description: 'Different features for different user roles',
+          information: 'Admins get full monitoring access, managers see analytics dashboards, analysts have data export capabilities, viewers get read-only access. Reduces support burden and improves security.'
+        },
+        { 
+          title: 'Gradual Feature Rollout', 
+          description: 'Deploy new features to percentage of users',
+          information: 'Start with 10% of users, monitor performance and feedback, gradually increase to 100%. Allows safe deployment of API optimization features without affecting all users.'
+        },
+        { 
+          title: 'A/B Testing Capabilities', 
+          description: 'Compare different solutions in production',
+          information: 'Test different caching strategies, UI layouts, and API call patterns with real users. Data-driven decisions on which optimizations provide best results.'
+        },
+        { 
+          title: 'Emergency Rollback', 
+          description: 'Instant disable of problematic features',
+          information: 'Toggle features off immediately if issues arise, protect system stability during deployments, and maintain user experience during incidents.'
+        }
       ],
       metrics: [
-        { number: '6', label: 'Weeks Total' },
-        { number: '3', label: 'Key Phases' }
+        { number: '90%', label: 'Faster Feature Deployment' },
+        { number: '75%', label: 'Reduced Risk' }
       ],
-      summary: '6-week phased approach ensures minimal disruption while delivering immediate value in each phase.'
+      summary: 'Feature flags enable safe, controlled deployment of optimizations while maintaining system stability and user experience.'
     }
   },
   {
     id: 'slide5',
-    title: 'Expected Results',
+    title: 'Solution 4: Atomic Design System',
     type: 'cornell',
     content: {
-      cueItems: ['Performance', 'Reliability', 'Efficiency', 'Quality'],
+      cueItems: ['Atoms', 'Molecules', 'Organisms', 'Templates', 'Pages'],
       notes: [
-        { title: 'API Reduction', description: '85% reduction in API calls' },
-        { title: 'Uptime', description: '99.9% system availability' },
-        { title: 'Deployment Speed', description: '50% faster deployment times' },
-        { title: 'Issue Reduction', description: '90% fewer production issues' }
+        { 
+          title: 'Atomic Components', 
+          description: 'Reusable building blocks (buttons, inputs, badges)',
+          information: 'Standardized UI elements with consistent styling, accessibility features, and behavior. Reduces development time by 60% and ensures consistent user experience.'
+        },
+        { 
+          title: 'Molecular Combinations', 
+          description: 'Search boxes, metric cards, form fields',
+          information: 'Pre-built combinations of atoms that solve common UI patterns. Includes search with autocomplete, metric displays with trends, and form validation.'
+        },
+        { 
+          title: 'Organism Structures', 
+          description: 'Data tables, navigation bars, dashboards',
+          information: 'Complex UI sections that combine multiple molecules. Includes features like sorting, filtering, pagination, and responsive design out of the box.'
+        },
+        { 
+          title: 'Template Layouts', 
+          description: 'Page structures for different use cases',
+          information: 'Dashboard layout, authentication pages, settings panels, and monitoring interfaces. Provides consistent navigation and responsive design patterns.'
+        }
+      ],
+      metrics: [
+        { number: '60%', label: 'Faster Development' },
+        { number: '80%', label: 'Code Reusability' }
+      ],
+      summary: 'Atomic design system ensures scalable, maintainable, and consistent user interface development across all platforms.'
+    }
+  },
+  {
+    id: 'slide6',
+    title: 'Expected Business Results',
+    type: 'cornell',
+    content: {
+      cueItems: ['Cost Savings', 'Performance', 'Scalability', 'Developer Experience'],
+      notes: [
+        { 
+          title: 'API Cost Reduction', 
+          description: '85% reduction in API calls saves upgrade costs',
+          information: 'Avoid expensive plan upgrades, reduce infrastructure costs, and improve application performance. ROI achievement is the key here.'
+        },
+        { 
+          title: 'System Reliability', 
+          description: '99.9% uptime with automated monitoring',
+          information: 'Reduce downtime costs, improve user satisfaction(current analysis shows that users are only willing to wait 4 to 6 seconds for a result), and enable business growth. Automated alerts prevent issues before they impact users.'
+        },
+        { 
+          title: 'Development Velocity', 
+          description: '60% faster feature development',
+          information: 'Atomic design system and feature flags accelerate development cycles. New features deploy safely with gradual rollout and instant rollback capabilities.'
+        },
+        { 
+          title: 'Future Scalability', 
+          description: 'Architecture supports 10x growth',
+          information: 'Solution handles 3M API calls monthly, supports 10K+ concurrent users, and provides foundation for advanced features and integrations.'
+        }
       ],
       metrics: [
         { number: '85%', label: 'API Reduction' },
         { number: '99.9%', label: 'Uptime' },
-        { number: '50%', label: 'Faster Deployment' },
-        { number: '90%', label: 'Fewer Issues' }
+        { number: '60%', label: 'Faster Development' },
+        { number: '10x', label: 'Future Capacity' }
       ],
-      summary: 'Solution delivers scalable architecture within current budget while improving performance, reliability, and development velocity.'
+      summary: 'Comprehensive solution delivers immediate cost savings, improved reliability, and scalable architecture for future growth.'
     }
-  }
+  },
+  {
+    id: 'slide7',
+    title: 'Thank you very much',
+    type: 'title',
+    content: {
+        subtitle: 'This presentation is made by Osman Calisir'
+      }
+  },
 ];
